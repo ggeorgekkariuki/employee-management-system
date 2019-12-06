@@ -4,6 +4,7 @@ class DepartmentModel(db.Model):
     __tablename__ = 'departments'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(32), nullable=True, unique=True)
+    employee_id = db.relationship('EmployeesModel', backref='department', lazy=True)
 
     # Create a static method to create the table 'departments'
     def create(self):
