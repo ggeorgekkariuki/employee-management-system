@@ -10,3 +10,12 @@ First, create a CONFIG FILE that contains
     class Production(Config):
         DEBUG = False
         SECRET_KEY = "&G0^I#ibETsri0Y0bpUKS"
+
+Add the config file to the MAIN.PY FILE
+    from config.configs import Development
+    app.config.from_object(Development)
+
+Create the logic of calculating Tax in a folder called RESOURCES file employees.py
+
+We can import the module created above into the MAIN.py file. We will use it to create 
+generate a payroll
